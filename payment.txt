@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Gateway</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
+<script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.13462" type="text/javascript"></script>
+<script type="text/javascript"> JotForm.init(function(){
+JotForm.description('input_21', 'This is the address where the meal(s) will be delivered.');
+setTimeout(function() {
+$('input_23').hint('ex: myname@example.com');
+}, 20);
+setTimeout(function() {
+$('input_19').hint('ex: myname@example.com');
+}, 20);
+productID = {"0":"input_24_1001","1":"input_24_1002","2":"input_24_1003"};
+paymentType = "product"; JotForm.setCurrencyFormat('USD',true, 'point');
+
+JotForm.totalCounter({"input_24_1001":{"price":"150.00","quantityField":"input_24_quantity_1001_0"},"input_24_1002":{"price":"175.00","quantityField":"input_24_quantity_1002_0"},"input_24_1003":{"price":"147.00","quantityField":"input_24_quantity_1003_0"}, "input_24_1004":{"price":"250.00","quantityField":"input_24_quantity_1004_0"}, "input_24_1005":{"price":"295.00","quantityField":"input_24_quantity_1005_0"},
+"input_24_1006":{"price":"300.00","quantityField":"input_24_quantity_1006_0"}, "input_24_1007":{"price":"325.00","quantityField":"input_24_quantity_1007_0"}});
+$$('.form-product-custom_quantity').each(function(el, i){el.observe('blur', function(){isNaN(this.value) || this.value < 1 ? this.value = '0' : this.value = parseInt(this.value)})});
+$$('.form-product-custom_quantity').each(function(el, i){el.observe('focus', function(){this.value == 0 ? this.value = '' : this.value})});
+/*INIT-END*/
+});
+
+
+JotForm.prepareCalculationsOnTheFly([null,{"name":"image","qid":"1","text":"Image","type":"co ntrol_image"},{"name":"submit","qid":"2","text":"Submit","type":"control_button"},null,null,null
+,null,{"name":"doubleclickTo","qid":"7","text":"Online Ordering Form","type":"control_text"},null,null,{"name":"doubleclickTo10","qid":"10","text":"Delivery Details","type":"control_text"},null,null,null,null,{"name":"doubleclickTo15","qid":"15","text":"P ayment Details","type":"control_text"},{"name":"fullName16","qid":"16","text":"Full Name","type":"control_fullname"},{"name":"address17","qid":"17","text":"Address","type":"con trol_address"},{"name":"phoneNumber18","qid":"18","text":"Phone Number","type":"control_phone"},{"name":"email19","qid":"19","text":"E- mail","type":"control_email"},{"name":"fullName20","qid":"20","text":"Full Name","type":"control_fullname"},{"description":"This is the address where the meal(s) will be delivered.","name":"address21","qid":"21","text":"Address","type":"control_address"},{"name": "phoneNumber22","qid":"22","text":"Phone Number","type":"control_phone"},{"name":"email23","qid":"23","text":"E- mail","type":"control_email"},{"name":"mealChoices","qid":"24","text":"Meal Choices","type":"control_authnet"},{"name":"enterThe25","qid":"25","text":"Enter the message as it's shown","type":"control_captcha"}]);
+setTimeout(function() { JotForm.paymentExtrasOnTheFly([null,{"name":"image","qid":"1","text":"Image","type":"control_image"},{"name":"submit","qid":"2","text":"Submit","type":"control_button"},null,null,null,null
+,{"name":"doubleclickTo","qid":"7","text":"Online Ordering Form","type":"control_text"},null,null,{"name":"doubleclickTo10","qid":"10","text":"Delivery Details","type":"control_text"},null,null,null,null,{"name":"doubleclickTo15","qid":"15","text":"P ayment Details","type":"control_text"},{"name":"fullName16","qid":"16","text":"Full Name","type":"control_fullname"},{"name":"address17","qid":"17","text":"Address","type":"con trol_address"},{"name":"phoneNumber18","qid":"18","text":"Phone Number","type":"control_phone"},{"name":"email19","qid":"19","text":"E- mail","type":"control_email"},{"name":"fullName20","qid":"20","text":"Full Name","type":"control_fullname"},{"description":"This is the address where the meal(s) will be delivered.","name":"address21","qid":"21","text":"Address","type":"control_address"},{"name":
+"phoneNumber22","qid":"22","text":"Phone Number","type":"control_phone"},{"name":"email23","qid":"23","text":"E- mail","type":"control_email"},{"name":"mealChoices","qid":"24","text":"Meal Choices","type":"control_authnet"},{"name":"enterThe25","qid":"25","text":"Enter the message as it's shown","type":"control_captcha"}]);}, 20);
+</script>
+<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.13462" rel="stylesheet" type="text/css"
+/>
+<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.13462" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.13462"
+/>
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=5da5 f5afbdb53a02c94de4b1"/>
+<style type="text/css">
+.form-label-left{
+width:150px;
+}
+.form-line{
+padding-top:12px;
+padding-bottom:12px;
+}
+.form-label-right{
+width:150px;
+}
+.form-all{ width:690px; color:#555 !important;
+font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+font-size:14px;
+}
+.form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+color: #141414;
+}
+
+
+</style>
+
+
+<style type="text/css" id="form-designer-style">
+/* Injected CSS Code */
+/*PREFERENCES STYLE*/
+.form-all {
+font-family: Arial, sans-serif;
+}
+.form-all .qq-upload-button,
+.form-all .form-submit-button,
+.form-all .form-submit-reset,
+.form-all .form-submit-print {
+font-family: Arial, sans-serif;
+}
+.form-all .form-pagebreak-back-container,
+.form-all .form-pagebreak-next-container {
+font-family: Arial, sans-serif;
+}
+.form-header-group {
+font-family: Arial, sans-serif;
+}
+.form-label {
+font-family: Arial, sans-serif;
+}
+
+
+.form-label.form-label-auto {
+
+
+display: inline-block;
+float: left;
+text-align: left;
+
+
+}
+
+
+.form-line {
+margin-top: 12px;
+margin-bottom: 12px;
+}
+
+
+.form-all {
+width: 650px;
+}
+
+
+.form-label-left,
+.form-label-right,
+.form-label-left.form-label-auto,
+.form-label-right.form-label-auto {
+width: 150px;
+}
+.form-all {
+font-size: 18px
+}
+.form-all .qq-upload-button,
+.form-all .qq-upload-button,
+.form-all .form-submit-button,
+.form-all .form-submit-reset,
+.form-all .form-submit-print {
+font-size: 18px
+}
+.form-all .form-pagebreak-back-container,
+.form-all .form-pagebreak-next-container {
+font-size: 18px
+}
+
+
+.supernova .form-all, .form-all {
+background-color: ;
+border: 1px solid transparent;
+}
+
+
+.form-all {
+color: #555;
+}
+.form-header-group .form-header {
+color: #555;
+}
+.form-header-group .form-subHeader {
+color: #555;
+}
+.form-label-top,
+.form-label-left,
+.form-label-right,
+.form-html,
+.form-checkbox-item label,
+.form-radio-item label {
+color: #555;
+}
+.form-sub-label {
+color: #6f6f6f;
+}
+
+
+.supernova {
+background-color: undefined;
+}
+.supernova body {
+background: transparent;
+}
+
+
+.form-textbox,
+.form-textarea,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+background-color: undefined;
+}
+
+
+.supernova {
+background-image: none;
+}
+#stage {
+background-image: none;
+}
+
+
+.form-all {
+background-image: none;
+}
+
+
+.ie-8 .form-all:before { display: none; }
+.ie-8 {
+margin-top: auto;
+margin-top: initial;
+}
+
+
+/*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+/* Injected CSS Code */
+</style>
+
+
+<form class="jotform-form" action="https://pci.jotform.com/submit/92905309131453" method="post" name="form_92905309131453" id="92905309131453" accept-charset="utf-8">
+<input type="hidden" name="formID" value="92905309131453" />
+<input type="hidden" id="JWTContainer" value="" />
+<input type="hidden" id="cardinalOrderNumber" value="" />
+<div role="main" class="form-all">
+<ul class="form-section page-section">
+<li class="form-line" data-type="control_image" id="id_1">
+<div id="cid_1" class="form-input-wide">
+<img alt="" class="form-image" style="border:0" src="//www.jotform.com/uploads/guest_40265565483055/form_files/Logo JPG Format.jpg" height="117px" width="261px" data-component="image" />
+</div>
+</li>
+<li class="form-line" data-type="control_text" id="id_7">
+<div id="cid_7" class="form-input-wide">
+<div id="text_7" class="form-html" data-component="text">
+<p><span style="font-size:large;"><strong>Online Ordering Form</strong></span></p>
+</div>
+</div>
+</li>
+<li class="form-line" data-type="control_text" id="id_10">
+<div id="cid_10" class="form-input-wide">
+<div id="text_10" class="form-html" data-component="text">
+<p><em><span style="font-size:medium;">Delivery Details</span></em></p>
+</div>
+</div>
+</li>
+<li class="form-line jf-required" data-type="control_fullname" id="id_20">
+<label class="form-label form-label-left form-label-auto" id="label_20" for="first_20"> Full Name
+<span class="form-required">
+*
+</span>
+</label>
+<div id="cid_20" class="form-input jf-required">
+<div data-wrapper-react="true">
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="first_20" name="q20_fullName20[first]" class="form-textbox validate[required]" size="10" value="" data-component="first" aria-labelledby="label_20 sublabel_20_first" required="" />
+<label class="form-sub-label" for="first_20" id="sublabel_20_first" style="min- height:13px"> First Name </label>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="last_20" name="q20_fullName20[last]" class="form-textbox validate[required]" size="15" value="" data-component="last" aria-labelledby="label_20 sublabel_20_last" required="" />
+<label class="form-sub-label" for="last_20" id="sublabel_20_last" style="min- height:13px"> Last Name </label>
+</span>
+</div>
+</div>
+</li>
+<li class="form-line jf-required" data-type="control_address" id="id_21">
+<label class="form-label form-label-left form-label-auto" id="label_21" for="input_21_addr_line1">
+Address
+<span class="form-required">
+*
+</span>
+</label>
+<div id="cid_21" class="form-input jf-required">
+<table summary="" class="form-address-table">
+<tbody>
+<tr>
+<td colSpan="2">
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="input_21_addr_line1" name="q21_address21[addr_line1]" class="form-textbox validate[required] form-address-line" autoComplete="address-line1" value="" data-component="address_line_1" aria-labelledby="label_21 sublabel_21_addr_line1" required="" />
+<label class="form-sub-label" for="input_21_addr_line1" id="sublabel_21_addr_line1" style="min-height:13px"> Street Address </label>
+</span>
+</td>
+</tr>
+<tr>
+<td colSpan="2">
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="input_21_addr_line2" name="q21_address21[addr_line2]" class="form-textbox form-address-line" autoComplete="address-line2" size="46" value="" data- component="address_line_2" aria-labelledby="label_21 sublabel_21_addr_line2" required="" />
+<label class="form-sub-label" for="input_21_addr_line2" id="sublabel_21_addr_line2" style="min-height:13px"> Street Address Line 2 </label>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="input_21_city" name="q21_address21[city]" class="form- textbox validate[required] form-address-city" autoComplete="address-level2" size="21" value="" data-component="city" aria-labelledby="label_21 sublabel_21_city" required="" />
+<label class="form-sub-label" for="input_21_city" id="sublabel_21_city" style="min- height:13px"> City </label>
+</span>
+</td>
+<td>
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="input_21_state" name="q21_address21[state]" class="form- textbox validate[required] form-address-state" autoComplete="address-level1" size="22" value="" data-component="state" aria-labelledby="label_21 sublabel_21_state" required="" />
+<label class="form-sub-label" for="input_21_state" id="sublabel_21_state" style="min- height:13px"> State / Province </label>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="text" id="input_21_postal" name="q21_address21[postal]" class="form- textbox form-address-postal" autoComplete="postal-code" size="10" value="" data- component="zip" aria-labelledby="label_21 sublabel_21_postal" required="" />
+<label class="form-sub-label" for="input_21_postal" id="sublabel_21_postal" style="min-height:13px"> Postal / Zip Code </label>
+</span>
+</td>
+<td>
+<span class="form-sub-label-container" style="vertical-align:top">
+<select class="form-dropdown validate[required] form-address-country noTranslate" name="q21_address21[country]" id="input_21_country" data-component="country" required="" aria-labelledby="label_21 sublabel_21_country" autoComplete="country">
+<option value=""> Please Select </option>
+<option value="United States"> India </option>
+</select>
+<label class="form-sub-label" for="input_21_country" id="sublabel_21_country" style="min-height:13px"> Country </label>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="form-line jf-required" data-type="control_phone" id="id_22">
+<label class="form-label form-label-left form-label-auto" id="label_22" for="input_22_area"> Phone Number
+<span class="form-required">
+*
+</span>
+</label>
+<div id="cid_22" class="form-input jf-required">
+<div data-wrapper-react="true">
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="tel" id="input_22_area" name="q22_phoneNumber22[area]" class="form- textbox validate[required]" size="6" value="" data-component="areaCode" aria- labelledby="label_22 sublabel_22_area" required="" />
+<span class="phone-separate" aria-hidden="true">
+-
+</span>
+<label class="form-sub-label" for="input_22_area" id="sublabel_22_area" style="min- height:13px"> Area Code </label>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<input type="tel" id="input_22_phone" name="q22_phoneNumber22[phone]" class="form-textbox validate[required]" size="12" value="" data-component="phone" aria- labelledby="label_22 sublabel_22_phone" required="" />
+<label class="form-sub-label" for="input_22_phone" id="sublabel_22_phone" style="min- height:13px"> Phone Number </label>
+</span>
+</div>
+</div>
+</li>
+<li class="form-line" data-type="control_email" id="id_23">
+<label class="form-label form-label-left form-label-auto" id="label_23" for="input_23"> E- mail </label>
+<div id="cid_23" class="form-input">
+<input type="email" id="input_23" name="q23_email23" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: myname@example.com" data- component="email" aria-labelledby="label_23" />
+</div>
+</li>
+
+
+
+</li>
+<li class="form-line jf-required" data-type="control_authnet" id="id_24">
+<label class="form-label form-label-left form-label-auto" id="label_24" for="input_24"> IceCream Choices
+<span class="form-required">
+*
+</span>
+</label>
+<div id="cid_24" class="form-input jf-required">
+<div data-wrapper-react="true">
+<div data-wrapper-react="true">
+<input type="hidden" name="simple_fpc" data-payment_type="authnet" data- component="payment1" value="24" />
+<input type="hidden" name="payment_total_checksum" id="payment_total_checksum" data-component="payment2" />
+<div data-wrapper-react="true">
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1001" name="q24_mealChoices[][id]" value="1001" />
+<label for="input_24_1001" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1001"> Fudge Ice Cream
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1001_price">
+150.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1001_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1001][item_0]" id="input_24_quantity_1001_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1001_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1001][item_1]" id="input_24_custom_1001_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1001_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1001][item_2]" id="input_24_custom_1001_2">
+<option value="Regular"> Chocolate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1001_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1001][item_3]" id="input_24_custom_1001_3">
+<option value="Hot"> Frozen </option>
+<option value="Chilled"> Chilled </option>
+<option value="Frozen"> Cold </option>
+</select>
+</span>
+</div>
+</span>
+<br/>
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1002" name="q24_mealChoices[][id]" value="1002" />
+<label for="input_24_1002" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1002"> Glampfire Trial Mix
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1002_price">
+195.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1002_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1002][item_0]" id="input_24_quantity_1002_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1002_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1002][item_1]" id="input_24_custom_1002_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1002_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1002][item_2]" id="input_24_custom_1002_2">
+<option value="Regular"> Chocolate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1002_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1002][item_3]" id="input_24_custom_1002_3">
+<option value="Hot"> Cold </option>
+<option value="Chilled"> Chilled </option>
+<option value="Frozen"> Frozen </option>
+</select>
+</span>
+</div>
+</span>
+<br/>
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1003" name="q24_mealChoices[][id]" value="1003" />
+<label for="input_24_1003" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1003"> Chillin' The Roast
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1003_price">
+215.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1003_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1003][item_0]" id="input_24_quantity_1003_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1003_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1003][item_1]" id="input_24_custom_1003_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1003_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1003][item_2]" id="input_24_custom_1003_2">
+<option value="Regular"> Choclate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1003_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1003][item_3]" id="input_24_custom_1003_3">
+<option value="Chilled"> Chilled </option>
+<option value="Chilled"> Frozen </option>
+<option value="Chilled"> Cold </option>
+<option value="">  </option>
+</select>
+</span>
+</div>
+</span>
+
+
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1004" name="q24_mealChoices[][id]" value="1004" />
+<label for="input_24_1004" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1004"> Unicorn Magic
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1004_price">
+250.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1004_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1004][item_0]" id="input_24_quantity_1004_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1004_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1004][item_1]" id="input_24_custom_1004_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1004_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1004][item_2]" id="input_24_custom_1004_2">
+<option value="Regular"> Choclate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1004_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1004][item_3]" id="input_24_custom_1004_3">
+<option value="Chilled"> Chilled </option>
+<option value="Chilled"> Frozen </option>
+<option value="Chilled"> Cold </option>
+<option value="">  </option>
+</select>
+</span>
+</div>
+</span>
+
+
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1005" name="q24_mealChoices[][id]" value="1005" />
+<label for="input_24_1005" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1005"> Horchata
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true">
+Rs
+<span id="input_24_1005_price">
+295.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1005_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1005][item_0]" id="input_24_quantity_1005_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1005_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1005][item_1]" id="input_24_custom_1005_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1005_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1005][item_2]" id="input_24_custom_1005_2">
+<option value="Regular"> Choclate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1005_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1005][item_3]" id="input_24_custom_1005_3">
+<option value="Chilled"> Chilled </option>
+<option value="Chilled"> Frozen </option>
+<option value="Chilled"> Cold </option>
+<option value="">  </option>
+</select>
+</span>
+</div>
+</span>
+
+
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1006" name="q24_mealChoices[][id]" value="1006" />
+<label for="input_24_1006" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1006"> Peaches & Cream
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1006_price">
+300.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1006_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1006][item_0]" id="input_24_quantity_1006_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1006_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1006][item_1]" id="input_24_custom_1006_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1006_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1006][item_2]" id="input_24_custom_1006_2">
+<option value="Regular"> Choclate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1006_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1006][item_3]" id="input_24_custom_1006_3">
+<option value="Chilled"> Chilled </option>
+<option value="Chilled"> Frozen </option>
+<option value="Chilled"> Cold </option>
+<option value="">  </option>
+</select>
+</span>
+</div>
+</span>
+
+
+<span class="form-product-item hover-product-item">
+<div data-wrapper-react="true" class="form-product-item-detail">
+<input type="checkbox" class="form-checkbox validate[required] " id="input_24_1007" name="q24_mealChoices[][id]" value="1007" />
+<label for="input_24_1007" class="form-product-container">
+<span data-wrapper-react="true">
+<span class="form-product-name" id="product-name-input_24_1007"> Mini Reese
+</span>
+<span class="form-product-details">
+<b>
+<span data-wrapper-react="true"> Rs
+<span id="input_24_1007_price">
+325.00
+</span>
+</span>
+</b>
+</span>
+</span>
+</label>
+<br/>
+<br/>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_quantity_1007_0" style="min- height:13px"> Quantity </label>
+<input type="text" size="3" class="form-textbox validate[required] form-product- custom_quantity" name="q24_mealChoices[special_1007][item_0]" id="input_24_quantity_1007_0" value="1" />
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1007_1" style="min- height:13px"> Diet Type </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1003][item_1]" id="input_24_custom_1007_1">
+<option value="Regular"> Regular </option>
+<option value="Therapeutic - Diabetic 1800 A.D.A."> Therapeutic - Diabetic 1800
+A.D.A. </option>
+<option value="Therapeutic - Bland"> Therapeutic - Bland </option>
+<option value="Therapeutic - Low Residue/Modified Fiber"> Therapeutic - Low
+Residue/Modified Fiber </option>
+<option value="Therapeutic - Renal"> Therapeutic - Renal </option>
+<option value="Therapeutic - Lactose Free"> Therapeutic - Lactose Free </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1007_2" style="min- height:13px"> Flavor </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1007][item_2]" id="input_24_custom_1007_2">
+<option value="Regular"> Choclate </option>
+<option value="Pureed"> Vanilla </option>
+<option value="Chopped"> Strawberry </option>
+</select>
+</span>
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_custom_1007_3" style="min- height:13px"> Temperature </label>
+<select class="form-dropdown validate[required]" name="q24_mealChoices[special_1007][item_3]" id="input_24_custom_1007_3">
+<option value="Chilled"> Chilled </option>
+<option value="Chilled"> Frozen </option>
+<option value="Chilled"> Cold </option>
+<option value="">  </option>
+</select>
+</span>
+</div>
+</span>
+
+
+
+<br/>
+<span class="form-payment-total">
+<b>
+<span id="total-text"> Total
+</span>
+
+
+<span class="form-payment-price">
+<span data-wrapper-react="true"> Rs
+<span id="payment_total">
+0.00
+</span>
+</span>
+</span>
+</b>
+</span>
+</div>
+<hr/>
+</div>
+<table class="form-address-table payment-form-table" cellPadding="0" cellSpacing="0">
+<tbody>
+<tr>
+<th colSpan="2" style="text-align:left;margin-top:20px;display:table" id="ccTitle24"> Credit Card
+</th>
+</tr>
+<tr>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_firstName" id="sublabel_cc_firstName" style="min-height:13px;margin:0 0 3px 0"> First Name </label>
+<input type="text" id="input_24_cc_firstName" name="q24_mealChoices[cc_firstName]" class="form-textbox validate[required] cc_firstName" size="20" value="" data-component="cc_firstName" />
+</span>
+</td>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_lastName" id="sublabel_cc_lastName" style="min-height:13px;margin:0 0 3px 0"> Last Name </label>
+<input type="text" id="input_24_cc_lastName" name="q24_mealChoices[cc_lastName]" class="form-textbox validate[required] cc_lastName" size="20" value="" data-component="cc_lastName" />
+</span>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_number" id="sublabel_cc_number" style="min-height:13px;margin:0 0 3px 0"> Credit Card Number </label>
+<input type="number" id="input_24_cc_number" name="q24_mealChoices[cc_number]" class="form-textbox validate[required] cc_number" autoComplete="off" size="20" value="" data-component="cc_number" />
+</span>
+</td>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_ccv" id="sublabel_cc_ccv" style="min- height:13px;margin:0 0 3px 0"> Security Code </label>
+<input type="number" id="input_24_cc_ccv" name="q24_mealChoices[cc_ccv]" class="form-textbox validate[required] cc_ccv" autoComplete="off" style="width:52px" value="" data-component="cc_ccv" />
+</span>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_exp_month" id="sublabel_cc_exp_month" style="min-height:13px;margin:0 0 3px 0"> Expiration Month
+</label>
+<select class="form-dropdown validate[required] cc_exp_month" name="q24_mealChoices[cc_exp_month]" id="input_24_cc_exp_month" data- component="cc_exp_month">
+<option>  </option>
+<option value="January"> January </option>
+<option value="February"> February </option>
+<option value="March"> March </option>
+<option value="April"> April </option>
+<option value="May"> May </option>
+<option value="June"> June </option>
+<option value="July"> July </option>
+<option value="August"> August </option>
+<option value="September"> September </option>
+<option value="October"> October </option>
+<option value="November"> November </option>
+<option value="December"> December </option>
+</select>
+</span>
+</td>
+<td width="50%">
+<span class="form-sub-label-container" style="vertical-align:top">
+<label class="form-sub-label" for="input_24_cc_exp_year" id="sublabel_cc_exp_year" style="min-height:13px;margin:0 0 3px 0"> Expiration Year </label>
+<select class="form-dropdown validate[required] cc_exp_year" name="q24_mealChoices[cc_exp_year]" id="input_24_cc_exp_year" data- component="cc_exp_year">
+<option>  </option>
+<option value="2019"> 2019 </option>
+<option value="2020"> 2020 </option>
+<option value="2021"> 2021 </option>
+<option value="2022"> 2022 </option>
+<option value="2023"> 2023 </option>
+<option value="2024"> 2024 </option>
+<option value="2025"> 2025 </option>
+<option value="2026"> 2026 </option>
+<option value="2027"> 2027 </option>
+<option value="2028"> 2028 </option>
+</select>
+</span>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li class="form-line jf-required" data-type="control_captcha" id="id_25">
+<label class="form-label form-label-left form-label-auto" id="label_25" for="input_25"> Enter the message as it's shown
+<span class="form-required">
+*
+</span>
+</label>
+<div id="cid_25" class="form-input jf-required">
+<section data-wrapper-react="true">
+<div id="recaptcha_input_25" data-component="recaptcha" data- callback="recaptchaCallbackinput_25" data-expired- callback="recaptchaExpiredCallbackinput_25">
+</div>
+<input type="hidden" id="input_25" class="hidden validate[required]" name="recaptcha_visible" required="" />
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit&amp;onload=recaptchaLoadedin put_25"></script>
+<script type="text/javascript">
+var recaptchaLoadedinput_25 = function()
+{
+window.grecaptcha.render($("recaptcha_input_25"), {
+sitekey: '6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ',
+});
+var grecaptchaBadge = document.querySelector('.grecaptcha-badge');
+if (grecaptchaBadge)
+{
+grecaptchaBadge.style.boxShadow = 'gray 0px 0px 2px';
+}
+};
+
+
+/**
+* Called when the reCaptcha verifies the user is human
+* For invisible reCaptcha;
+*   Submit event is stopped after validations and recaptcha is executed.
+*   If a challenge is not displayed, this will be called right after grecaptcha.execute()
+*   If a challenge is displayed, this will be called when the challenge is solved successfully
+*   Submit is triggered to actually submit the form since it is stopped before.
+*/
+var recaptchaCallbackinput_25 = function()
+{
+var isInvisibleReCaptcha = false; var hiddenInput = $("input_25"); hiddenInput.setValue(1);
+if (!isInvisibleReCaptcha)
+{
+if (hiddenInput.validateInput)
+{
+hiddenInput.validateInput();
+}
+}
+else
+{
+triggerSubmit(hiddenInput.form)
+}
+
+
+function triggerSubmit(formElement)
+{
+var button = formElement.ownerDocument.createElement('input');
+button.style.display = 'none'; button.type = 'submit'; formElement.appendChild(button).click(); formElement.removeChild(button);
+}
+}
+
+
+// not really required for invisible recaptcha
+var recaptchaExpiredCallbackinput_25 = function()
+{
+var hiddenInput = $("input_25"); hiddenInput.writeAttribute("value", false); if (hiddenInput.validateInput)
+{
+hiddenInput.validateInput();
+}
+}
+</script>
+</section>
+</div>
+</li>
+<li class="form-line" data-type="control_button" id="id_2">
+<div id="cid_2" class="form-input-wide">
+<div style="margin-left:156px" class="form-buttons-wrapper ">
+<button id="input_2" type="submit" class="form-submit-button" data- component="button">
+Submit
+</button>
+</div>
+</div>
+</li>
+<li style="display:none">
+Should be Empty:
+<input type="text" name="website" value="" />
+</li>
+</ul>
+</div>
+
+
+
+</script>
+
+
+</form>
+
+
+</body>
+</html>
+
+
+	
+	
+	
